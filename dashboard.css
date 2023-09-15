@@ -1,0 +1,772 @@
+* {
+  margin: 0;
+  padding: 0;
+  height: max-content;
+}
+
+body {
+  height: max-content;
+  background-color: #f5fffa;
+  overflow-y: scroll;
+  border-top: 5px solid palegoldenrod;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.home,
+.About,
+.Experience,
+.contact,
+.projects {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0px;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.menu-toogle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  float: right;
+  width: 10px;
+}
+
+.bar {
+  width: 20px;
+  height: 3px;
+  margin: 3px 0;
+  background-color: black;
+  float: right;
+}
+
+.navlist {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navlist a {
+  color: slategrey;
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  padding-right: 20px;
+  position: relative;
+  font-weight: bold;
+  transition: transform 0.2s ease-in-out;
+}
+
+.navlist a:hover {
+  transform: scale(1.2);
+  color: black;
+}
+
+.static-heading {
+  display: inline-flexbox;
+  padding-left: 50px;
+  font-size: 2em;
+  letter-spacing: 10px;
+  font-family: "Comic Sans MS", cursive;
+  border-right: 2px solid;
+  width: 17%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 5s steps(8, end) infinite, cursor 0.6s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 17%;
+  }
+}
+
+@keyframes cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.hire-me-btn {
+  cursor: pointer;
+  background-color: black;
+  border: none;
+  width: 100%;
+  height: 100%;
+  color: aliceblue;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 7px 5px 10px black;
+}
+
+.text-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
+
+.text {
+  font-size: 20px;
+  font-family: "Comic Sans MS", cursive;
+  text-align: justify;
+  width: max-content;
+  position: relative;
+  align-self: center;
+  padding: 5%;
+  line-height: 40px;
+}
+
+h2 {
+  color: #ffa500;
+}
+
+.blink {
+  display: inline;
+  color: tomato;
+  animation: blink 6s linear infinite;
+  font-family: monospace;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.flex-buttons {
+  display: flex;
+  gap: 20px;
+  width: 70%;
+  padding-top: 10px;
+  font-size: 15px;
+  text-align: center;
+  justify-content: center;
+}
+
+.hire-button,
+.resume-button {
+  cursor: pointer;
+  background-color: black;
+  border: 1px solid black;
+  width: 100%;
+  color: aliceblue;
+  padding: 4px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.resume-button {
+  background-color: white;
+  color: black;
+  font-family: "Comic Sans MS", cursive;
+  padding: 15px;
+}
+
+.socialmedia-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10%;
+  align-items: center;
+  width: 80%;
+  padding-top: 15px;
+}
+
+.socilamedia-icons a i {
+  color: black;
+  font-size: 24px;
+}
+
+i {
+  color: black;
+}
+
+img {
+  width: 325px;
+  animation: img 8s ease-in-out infinite;
+  border-radius: 60% 30% 70%/60% 30% 70% 40%;
+}
+
+@keyframes img {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 40%/50% 60% 30% 60%;
+  }
+}
+
+/*About*/
+
+.me {
+  padding-top: 60px;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive;
+}
+
+.me p {
+  font-size: 12px;
+  padding-bottom: 2px;
+}
+
+.image-text-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-text-div img {
+  animation: none;
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+}
+
+.hage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  gap: 10px;
+  box-sizing: border-box;
+  width: 80%;
+}
+
+.experience {
+  align-items: center;
+  gap: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: 13px;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.education-column {
+  flex: 1;
+}
+
+.first {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.myinfo {
+  font-size: 16px;
+  margin-top: 30px;
+  text-align: justify;
+  width: 80%;
+  line-height: 25px;
+  font-family: "Comic Sans MS", cursive;
+}
+
+/*EXPERIENCE*/
+
+.Experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.experience-heading {
+  padding-top: 60px;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive;
+}
+
+.experience-heading p {
+  font-size: 12px;
+}
+
+.sumne {
+  width: 70%;
+}
+
+.Experience-main-div {
+  padding-top: 30px;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.Experience-box-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  gap: 50px;
+}
+
+.frontend-div h2,
+.backend-div h2 {
+  text-align: center;
+  font: bold;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.frontend-div,
+.backend-div {
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: 13px;
+  padding: 30px;
+  flex: 1;
+  text-align: left;
+  box-sizing: border-box;
+  justify-content: space-between;
+  font-family: sans-serif;
+}
+
+.Experience-box-div-coloumn {
+  flex: 1;
+}
+
+.language i {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.language li {
+  list-style-type: none;
+  font-size: 12px;
+  padding-left: 35px;
+}
+
+.language p {
+  font: bold;
+}
+
+/*Contact*/
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.contact-form {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background-color: #f5fffa;
+  padding: 30px;
+}
+
+.contact-form p {
+  font-size: 12px;
+  padding-bottom: 2px;
+}
+
+.contact-form h2 {
+  margin-bottom: 10px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 25px;
+}
+
+.submit {
+  cursor: pointer;
+  background-color: #ffa500;
+  border: none;
+  color: aliceblue;
+  height: 30px;
+  border-radius: 4px;
+  padding-top: 10px;
+}
+
+.contact-form form a {
+  text-decoration: none;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+.type {
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.type p {
+  font-size: 20px;
+}
+
+.type-ing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid black;
+  letter-spacing: 2px;
+  animation: typ 6s steps(22, end) infinite, blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typ {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+/*projects*/
+
+.projects {
+  text-align: center;
+}
+
+.projects p {
+  padding-top: 40px;
+  font-size: 12px;
+  margin-bottom: 5px;
+  font-family: "Comic Sans MS", cursive;
+}
+
+.projects h1 {
+  margin-bottom: 40px;
+  font-family: "Comic Sans MS", cursive;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+
+.project-card {
+  background-color: azure;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  line-height: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.project-card img {
+  max-width: 100%;
+}
+
+.project-card h2 {
+  margin-top: 10px;
+}
+
+.project-card p {
+  margin-top: 1px;
+  color: #666;
+  text-align: justify;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+  background-color: #0056b3;
+}
+
+.project-card img {
+  height: 200px;
+  animation: none;
+  border-radius: 60% 30% 70%/60% 30% 70% 40%;
+}
+
+/* //////__________________________________________________________________ */
+/*Responsive*/
+
+@media (max-width: 768px) {
+  body {
+    font-family: "Courier New", Courier, monospace;
+  }
+  .menu-toogle {
+    display: flex;
+  }
+
+  .static-heading {
+    font-size: 20px;
+    width: 100%;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 34%;
+    }
+  }
+
+  .navbar {
+    width: 80%;
+    padding-left: 15px;
+    margin: 10px;
+  }
+
+  .navlist {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: whitesmoke;
+    width: 30%;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+  }
+
+  .navlist.active {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  .navlist a {
+    color: slategrey;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .navlist a::after {
+    width: 50%;
+    left: 25%;
+    bottom: -2px;
+  }
+
+  .hire-me-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .text-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding-top: 65px;
+  }
+
+  .flex-buttons {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .text h1 {
+    font-size: 30px;
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  .text h2 {
+    font-size: 25px;
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  .socialmedia-icons {
+    width: 100%;
+  }
+
+  img {
+    width: 275px;
+  }
+
+  /*Responsive about page*/
+  .About {
+    padding: 2px;
+  }
+
+  .me {
+    padding-top: 20px;
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  .image-text-div {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .education {
+    text-align: center;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .hage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .experience {
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: 15px;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .myinfo {
+    width: 95%;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 30px;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .sumne {
+    width: 90%;
+  }
+
+  .Experience {
+    width: 100%;
+  }
+
+  .experience-heading {
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  .Experience-main-div {
+    padding-top: 30px;
+  }
+
+  .Experience-box-div {
+    justify-content: space-between;
+    box-sizing: border-box;
+    gap: 30px;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .frontend-div,
+  .backend-div {
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 20px;
+    flex: 1;
+    text-align: left;
+    box-sizing: border-box;
+    justify-content: space-between;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .frontend-div li,
+  .backend-div li {
+    font-size: 14px;
+  }
+
+  .contact-form {
+    padding: 45px;
+  }
+
+  .contact-form h2 {
+    margin-bottom: 30px;
+  }
+
+  .submit {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  .social-icons a i {
+    font-size: 25px;
+  }
+
+  .projects p,
+  .projects h1 {
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  .project-card p {
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .contact-form {
+    font-family: "Josefin Sans", sans-serif;
+  }
+}

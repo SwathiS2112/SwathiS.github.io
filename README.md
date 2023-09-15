@@ -1,1 +1,1 @@
-# SwathiS.github.io
+# vinayportfolio.github.io
